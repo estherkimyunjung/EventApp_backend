@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_07_02_195357) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string "title"
+    t.string "title" *
     t.string "category"
     t.datetime "date"
     t.string "address"
