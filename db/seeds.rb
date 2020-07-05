@@ -18,6 +18,7 @@ User.destroy_all
 # Faker::Title.title
 
 o1 = Organization.create(name:'Pretty Girlz Rock, Inc.', image: 'https://www.facebook.com/846964315420695/photos/p.1833915140058936/1833915140058936/', description: '(PGR). PGR is a non-profit organization geared towards young girls ages 11 – 18 to help them through the growing pains of life as they mature. We want to help them to understand the gifts and talents they have been blessed with, without compromise.')
+o2 = Organization.create(name:'ABC 13', image: 'https://www.pvamu.edu/wp-content/uploads/2020/06/KTRK-TV-ABC13-logo.jpg', description: 'Commercial Television Station')
 
 # create_table "organizations", force: :cascade do |t|
 #   t.string "name"
@@ -29,9 +30,11 @@ o1 = Organization.create(name:'Pretty Girlz Rock, Inc.', image: 'https://www.fac
 
 
 e1 = Event.create(title: "Toiletries Drive", category: "Donations", date: "6/10/2020", address: "200 Morris Pesin Dr, Jersey City, NJ 07305", description: "Lorem random random lorem", image: "https://images.squarespace-cdn.com/content/v1/58ed1f8abe6594788cc63423/1538688635989-ZIDXTXQ03046QUUJMR2D/ke17ZwdGBToddI8pDm48kMfboVgnxaKgpGcwguzTCcd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UWUymGR9T9tQaZJ91OjctDcNAoi32qhd6HffXL1tmh7GLCwLgRJzBxPM8v-1l46jLA/1+-+Hero.jpg", stage: "future", public: true, organization: o1)
+e2 = Event.create(title: "Fourth of July in Houston", category: "Concert", date: "7/04/2020", address: "6001 Fannin St, Houston, TX 77030", description: "celebration featuring the Houston Symphony", image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_649,q_75,w_1200/https://res.cloudinary.com/simpleview/image/upload/v1455215322/clients/houston/MillerOutdoor_2200w_9ecd8285-874e-46ca-bfe9-8ef6ad0ba030.jpg", stage: "cancel", public: true, organization: o2)
+e3 = Event.create(title: "Fourth of July in Houston", category: "Concert", date: "7/04/2020", address: "virtual", description: "3 hour long virtual celebration featuring the Houston Symphony", image: "https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_649,q_75,w_1200/https://res.cloudinary.com/simpleview/image/upload/v1455215322/clients/houston/MillerOutdoor_2200w_9ecd8285-874e-46ca-bfe9-8ef6ad0ba030.jpg", stage: "future", public: true, organization: o2)
 
 # create_table "events", force: :cascade do |t|
-#   t.string "title" //
+#   t.string "title"
 #   t.string "category"
 #   t.datetime "date"
 #   t.string "address"
