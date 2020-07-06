@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  skip_before_action :logged_in?, only: [:index]
+  
   def index
     @events = Event.all
     render json: @events
