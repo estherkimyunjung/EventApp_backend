@@ -17,7 +17,7 @@ User.destroy_all
 # }
 # Faker::Title.title
 
-o1 = Organization.create(name:'Pretty Girlz Rock, Inc.', image: 'https://www.facebook.com/846964315420695/photos/p.1833915140058936/1833915140058936/', description: '(PGR). PGR is a non-profit organization geared towards young girls ages 11 – 18 to help them through the growing pains of life as they mature. We want to help them to understand the gifts and talents they have been blessed with, without compromise.')
+o1 = Organization.create(name:'Pretty Girlz Rock, Inc.', image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/37982958_1833885546728562_2099848543677186048_n.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=YN_ZLnXASUgAX-03Dxs&_nc_ht=scontent-dfw5-1.xx&oh=0857ec8ad1093e3fcf02656628a0bb0f&oe=5F27CC17', description: '(PGR). PGR is a non-profit organization geared towards young girls ages 11 – 18 to help them through the growing pains of life as they mature. We want to help them to understand the gifts and talents they have been blessed with, without compromise.')
 o2 = Organization.create(name:'ABC 13', image: 'https://www.pvamu.edu/wp-content/uploads/2020/06/KTRK-TV-ABC13-logo.jpg', description: 'Commercial Television Station')
 
 # create_table "organizations", force: :cascade do |t|
