@@ -13,7 +13,8 @@ class EventsController < ApplicationController
     def create
         @event = Event.create(event_params)
         if @event.valid?
-            render json: {@event}, status: :created
+          # render json: { user: UserSerializer.new(@user) }, status: :created
+            render json: {event: @event}, status: :created
         else
             render json: { error: 'failed to create event'}, satus: :not_acceptable
         end

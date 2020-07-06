@@ -1,5 +1,4 @@
 class TicketsController < ApplicationController
-  skip_before_action :logged_in?, only: [:create]
 
   def create
       @ticket = Ticket.create(ticket_params)

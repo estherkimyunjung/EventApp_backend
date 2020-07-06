@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :logged_in?, only: [:create, :index]
+    skip_before_action :logged_in?, only: [:create]
 
     def index
         @users = User.all
@@ -12,8 +12,10 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(user_params)
+        @user = User.new(user_params)
+        byebug
         if @user.valid?
+            @user.save
             render json: { user: UserSerializer.new(@user) }, status: :created
         else
             render json: { error: 'failed to create user'}, status: :not_acceptable
@@ -24,6 +26,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:user_name, :password, :contact, :age, :supporter, :role, :secret_code)
+        params.permit(:username, :password, :password_confirmation, :contact, :age, :supporter, :role, :secret_code)
     end
 end
