@@ -47,8 +47,8 @@ e3 = Event.create(title: "Fourth of July in Houston", category: "Concert", date:
 #   t.datetime "updated_at", precision: 6, null: false
 # end
 
-u1 = User.create( user_name: 'eac012', password_digest: '123456', contact: 832-642-3210, age: 19, supporter: "Pretty Girlz Rock, Inc.", role: 'attendee', secret_code: 'null')
-u2 = User.create( user_name: 'test123', password_digest: '78910', contact: "testing@test.com", age: 27, supporter: "Pretty Girlz Rock, Inc.", role: 'organizer', secret_code: "h45kd9!0")
+u1 = User.create( username: 'eac012', password: '123456', contact: 832-642-3210, age: 19, supporter: "Pretty Girlz Rock, Inc.", role: 0, secret_code: 'null')
+u2 = User.create( username: 'test123', password: '78910', contact: "testing@test.com", age: 27, supporter: "Pretty Girlz Rock, Inc.", role: 1, secret_code: "h45kd9!0")
 # create_table "users", force: :cascade do |t|
 #   t.string "user_name"
 #   t.string "password_digest"
