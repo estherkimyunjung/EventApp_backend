@@ -21,6 +21,17 @@ class EventsController < ApplicationController
       end
   end
 
+  def destroy
+    @event = Event.find_by_id(params[:id])
+    unless @event.nil?
+      @event.destroy
+      render json: {error: 'Event has been delete'}
+    else
+      render json: {error: 'Event not Found!'}, status: 404
+    end
+  end
+
+
 
   private
   def event_params

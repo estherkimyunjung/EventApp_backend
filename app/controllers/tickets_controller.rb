@@ -2,7 +2,7 @@ class TicketsController < ApplicationController
 
   def create
       @ticket = Ticket.new(ticket_params)
-      byebug
+      # byebug
       if @ticket.valid?
           @ticket.save
           render json: {ticket: @ticket}, status: :created
