@@ -1,5 +1,5 @@
 class OrganizationsController < ApplicationController
-  skip_before_action :logged_in?, only: [:create]
+  skip_before_action :logged_in?, only: [:index]
   
   def index
     @organizations = Organization.all
