@@ -10,7 +10,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :stage
       t.boolean :public
       t.integer :organization_id
-      t.integer :qrcode
+      t.string :qrcode
 
       t.timestamps
     end
