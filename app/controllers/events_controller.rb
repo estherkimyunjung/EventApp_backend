@@ -3,12 +3,12 @@ class EventsController < ApplicationController
   
   def index
     @events = Event.all
-    render json: @events, include: [:organization]
+    render json: @events, include: [:organization, :users, :announcements]
   end
 
   def show
     @event = Event.find(params[:id])
-    render json: @event
+    render json: @event, include: [:users]
   end
 
   def create
@@ -21,10 +21,20 @@ class EventsController < ApplicationController
       end
   end
 
+  def update
+    @event = Event.find(params[:id])
+    if @event.update(event_params)
+        
+        render json: @event
+    else 
+        render json: { error: 'failed to update event'}, status: :not_acceptable
+    end
+  end
+
 
   private
   def event_params
-      params.require(:event).permit(:title, :category, :date, :address, :description, :image, :status, :public, :organization_id)
+      params.require(:event).permit(:title, :category, :date, :address, :description, :image, :stage, :public, :organization_id)
   end
     
 end

@@ -2,7 +2,6 @@ class TicketsController < ApplicationController
 
   def create
       @ticket = Ticket.new(ticket_params)
-      byebug
       if @ticket.valid?
           @ticket.save
           render json: {ticket: @ticket}, status: :created
@@ -14,7 +13,6 @@ class TicketsController < ApplicationController
   def delete
     tickets = Ticket.select{|ticket| ticket.user_id === params[user_id]}
     @ticket = tickets.find_by(event_id: params[event_id])
-    byebug
     if @ticket 
       @ticket.destroy
       render json: @ticket

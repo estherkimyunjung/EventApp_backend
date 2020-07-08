@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.integer :age
       t.string :supporter
       t.integer :role
-      t.string :secret_code
 
       t.timestamps
     end
