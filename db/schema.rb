@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_07_09_011515) do
     t.string "stage"
     t.boolean "public"
     t.integer "organization_id"
-    t.integer "qrcode"
+    t.string "qrcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
