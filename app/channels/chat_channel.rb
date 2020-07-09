@@ -24,13 +24,5 @@ class ChatChannel < ApplicationCable::Channel
     else
         render json: {error: "Message failed to create"}
     end
-  def create(options)
-    # byebug
-     Message.create(
-        room_id: options.fetch('roomId'),
-        content: options.fetch('content'),
-        user_id: options.fetch('userId')
-     )
-   end
   end
 end
