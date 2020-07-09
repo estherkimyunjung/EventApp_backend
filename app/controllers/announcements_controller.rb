@@ -1,7 +1,7 @@
 class AnnouncementsController < ApplicationController
     def create
         @announce = Announcement.create(announce_params)
-        byebug
+        # byebug
         if @announce.valid?
             render json: @annoumce, status: :created
         else
