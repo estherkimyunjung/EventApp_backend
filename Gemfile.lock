@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 7309c9d59f1f73e7875635c083f7d8958e0c9f3a
+  revision: cdf2ce209afa2e4dc65e7ccc6066032d641996b9
   branch: master
   specs:
     faker (2.13.0)
@@ -79,6 +79,8 @@ GEM
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -103,7 +105,7 @@ GEM
     minitest (5.14.1)
     msgpack (1.3.3)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
     puma (4.3.5)
@@ -143,6 +145,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -172,12 +175,14 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   faker!
+  fast_jsonapi
   jwt (~> 2.2)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.2)
+  redis
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
-skip_before_action :logged_in?, only: [:create]
+skip_before_action :logged_in?, only: [:create, :show]
 
     def index
         @users = User.all
-        render json: @users
+        render json: @users, include: [:events, :messages, :rooms]
     end
 
     def show
     @user = User.find(params[:id])
-    render json: @user
+    render json: @user, include: [:events, :messages, :rooms]
     end
 
     def create
