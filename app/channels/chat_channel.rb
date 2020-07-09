@@ -5,7 +5,7 @@ class ChatChannel < ApplicationCable::Channel
   def unsubscribed
     end
   def create(options)
-    byebug
+    # byebug
      Message.create(
         room_id: options.fetch('roomId'),
         content: options.fetch('content'),
