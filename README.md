@@ -1,25 +1,26 @@
-# README
+# Connect Us
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Connect Us is focused on being a single source of information from large group events. This will allow organizers and those that they designate as ‘leads’ or helpers to better direct attendees with event based needs. Those needs may include direction to hydration stations, bathrooms, medical stations and other extraneous issues. The application will serve as a mode of communication between organizers and leads but also allow for mass communication regarding any changes or adjustments to events.
 
-Things you may want to cover:
+Frontend: https://github.com/SleepyWindows/eventapp-font-end
 
-* Ruby version
+## How to Install and Use
 
-* System dependencies
+Clone down this repo and the front end repo on your computer. Cd into the backend folder and bundle install to install all the necessary dependies. After they are installed type in rails s in your terminal to get the backend going. Next, cd into the frontend folder and npm install to install all the necessary packages, afterwares type npm start to start using the application
 
-* Configuration
+## RoadMap
 
-* Database creation
+### Things to improve upon:
+   -Better improve access to private events
 
-* Database initialization
+### Project Status
 
-* How to run the test suite
+Last worked on: June 2020
 
-* Services (job queues, cache servers, search engines, etc.)
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-* Deployment instructions
+## Authors and acknowledgement
 
-* ...
-# EventApp_backend
+Built by Lauren Birts, Edwin Calvillo, and Esther Kim, Flatiron Software Engineering Houston 04/20/2020
+
