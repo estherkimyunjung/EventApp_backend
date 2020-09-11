@@ -4,6 +4,8 @@ Connect Us is focused on being a single source of information from large group e
 
 Frontend: https://github.com/SleepyWindows/eventapp-font-end
 
+Demo: https://www.youtube.com/watch?v=ZV7kz5FBI6A&t=374s
+
 ## How to Install and Use
 
 Clone down this repo and the front end repo on your computer. Cd into the backend folder and bundle install to install all the necessary dependies. After they are installed type in rails s in your terminal to get the backend going. Next, cd into the frontend folder and npm install to install all the necessary packages, afterwares type npm start to start using the application
